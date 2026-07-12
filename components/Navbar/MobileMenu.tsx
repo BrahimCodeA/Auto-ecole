@@ -1,11 +1,11 @@
 "use client";
 
-import Link from "next/link";
 import { Menu, Phone, Car } from "lucide-react";
 
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 import { navLinks } from "./links";
+import SmartLink from "../shared/SmartLink";
 
 export default function MobileMenu() {
   return (
@@ -37,7 +37,7 @@ export default function MobileMenu() {
           {/* LINKS */}
           <nav className="flex flex-col gap-6">
             {navLinks.map((link) => (
-              <Link
+              <SmartLink
                 key={link.href}
                 href={link.href}
                 className="
@@ -66,13 +66,13 @@ export default function MobileMenu() {
                   mt-1
                 "
                 />
-              </Link>
+              </SmartLink>
             ))}
           </nav>
 
           {/* CONTACT */}
           <div className="absolute bottom-8 left-6 right-6">
-            <a
+            <SmartLink
               href="tel:0102030405"
               className="
                 flex
@@ -90,7 +90,7 @@ export default function MobileMenu() {
             >
               <Phone className="w-5 h-5 text-yellow-400" />
               Appeler l'auto-école
-            </a>
+            </SmartLink>
           </div>
         </SheetContent>
       </Sheet>

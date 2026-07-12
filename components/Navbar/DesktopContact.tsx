@@ -1,7 +1,12 @@
+import SmartLink from "../shared/SmartLink";
+
 export default function DesktopContact() {
   return (
     <div className="hidden lg:flex justify-end">
-      <a href="tel:0102030405" className="group flex items-center gap-3">
+      <SmartLink
+        href="tel:0102030405"
+        className="group flex items-center gap-3"
+      >
         <div className="flex items-center justify-center w-10 h-10 rounded-full bg-yellow-400 text-blue-900 group-hover:bg-blue-900 group-hover:text-yellow-400 transition-colors duration-300">
           <span className="text-lg">☎</span>
         </div>
@@ -13,7 +18,7 @@ export default function DesktopContact() {
             01 02 03 04 05
           </p>
         </div>
-      </a>
+      </SmartLink>
     </div>
   );
 }

@@ -1,6 +1,6 @@
-import Link from "next/link";
 import FormationMenu from "./FormationMenu";
 import { navLinks } from "./links";
+import SmartLink from "../shared/SmartLink";
 
 export default function DesktopNav() {
   return (
@@ -9,7 +9,7 @@ export default function DesktopNav() {
         link.label === "Formations" ? (
           <FormationMenu key={link.href} />
         ) : (
-          <Link
+          <SmartLink
             key={link.href}
             href={link.href}
             className="
@@ -24,7 +24,7 @@ export default function DesktopNav() {
             "
           >
             {link.label}
-          </Link>
+          </SmartLink>
         )
       )}
     </nav>

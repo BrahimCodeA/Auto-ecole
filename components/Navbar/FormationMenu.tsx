@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { ChevronDown, Car, Bike } from "lucide-react";
+import SmartLink from "../shared/SmartLink";
 
 export default function FormationMenu() {
   return (
@@ -46,7 +46,7 @@ export default function FormationMenu() {
           duration-300
         "
       >
-        <Link
+        <SmartLink
           href="/formations/voiture"
           className="
     group/item
@@ -87,9 +87,9 @@ export default function FormationMenu() {
               Formation B
             </span>
           </span>
-        </Link>
+        </SmartLink>
 
-        <Link
+        <SmartLink
           href="/formations/moto"
           className="
     group/item
@@ -130,7 +130,7 @@ export default function FormationMenu() {
               Formation A
             </span>
           </span>
-        </Link>
+        </SmartLink>
       </div>
     </div>
   );
