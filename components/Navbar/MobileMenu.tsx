@@ -6,6 +6,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 import { navLinks } from "./links";
 import SmartLink from "../shared/SmartLink";
+import MobileFormationMenu from "./MobileFormationMenu";
 
 export default function MobileMenu() {
   return (
@@ -36,38 +37,25 @@ export default function MobileMenu() {
 
           {/* LINKS */}
           <nav className="flex flex-col gap-6">
-            {navLinks.map((link) => (
-              <SmartLink
-                key={link.href}
-                href={link.href}
-                className="
-                border-b-amber-300
-                 border-b-2
-                  text-lg
-                  font-semibold
-                  text-slate-700
-                  hover:text-blue-900
-                  transition
-                  relative
-                  group
-                "
-              >
-                {link.label}
-
-                <span
+            {navLinks.map((link) =>
+              link.label === "Formations" ? (
+                <MobileFormationMenu key={link.href} />
+              ) : (
+                <SmartLink
+                  key={link.href}
+                  href={link.href}
                   className="
-                  block
-                  h-0.5
-                  w-0
-                  bg-yellow-400
-                  transition-all
-                  duration-300
-                  group-hover:w-10
-                  mt-1
-                "
-                />
-              </SmartLink>
-            ))}
+        text-lg
+        font-semibold
+        text-slate-700
+        hover:text-blue-900
+        transition
+      "
+                >
+                  {link.label}
+                </SmartLink>
+              )
+            )}
           </nav>
 
           {/* CONTACT */}
