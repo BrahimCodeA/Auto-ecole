@@ -8,7 +8,10 @@ import Reveal from "../animations/Reveal";
 
 export default function Formations() {
   return (
-    <section className="relative overflow-hidden bg-[#F8FAFC] px-6 py-24">
+    <section
+      className="relative overflow-hidden bg-[#F8FAFC] px-6 py-24"
+      id="formations"
+    >
       {/* Glow */}
       <BackgroundGlow />
 

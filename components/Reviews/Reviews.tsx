@@ -9,7 +9,10 @@ import Reveal from "../animations/Reveal";
 
 export default function Reviews() {
   return (
-    <section className="relative overflow-hidden bg-white px-6 py-24">
+    <section
+      className="relative overflow-hidden bg-white px-6 py-24"
+      id="reviews"
+    >
       <BackgroundGrid />
       <BackgroundGlow />
 

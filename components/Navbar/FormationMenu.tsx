@@ -47,7 +47,7 @@ export default function FormationMenu() {
         "
       >
         <SmartLink
-          href="/formations/voiture"
+          href="/#formations"
           className="
     group/item
     flex
@@ -90,7 +90,7 @@ export default function FormationMenu() {
         </SmartLink>
 
         <SmartLink
-          href="/formations/moto"
+          href="/#formations"
           className="
     group/item
     flex

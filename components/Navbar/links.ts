@@ -4,7 +4,7 @@ export const navLinks = [
     label: "Formations",
   },
   {
-    href: "#avis",
+    href: "#reviews",
     label: "Avis",
   },
   {

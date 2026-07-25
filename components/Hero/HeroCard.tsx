@@ -1,4 +1,5 @@
 import { Bike, CarFront, Check } from "lucide-react";
+import SmartLink from "../shared/SmartLink";
 
 export default function HeroCard() {
   return (
@@ -85,9 +86,24 @@ export default function HeroCard() {
           </div>
         </div>
 
-        <button className="mt-8 w-full rounded-2xl bg-yellow-400 py-4 font-bold text-blue-950 transition hover:bg-yellow-300">
+        <SmartLink
+          href="#formations"
+          className="
+    mt-8
+    block
+    w-full
+    rounded-2xl
+    bg-yellow-400
+    py-4
+    text-center
+    font-bold
+    text-blue-950
+    transition
+    hover:bg-yellow-300
+  "
+        >
           Voir les offres
-        </button>
+        </SmartLink>
       </div>
     </div>
   );

@@ -99,7 +99,7 @@ export default function FormationCard({
 
         {/* Button */}
         <SmartLink
-          href="/contact"
+          href="/#contact"
           className="
           mt-6
           flex

@@ -53,7 +53,7 @@ export default function MobileFormationMenu() {
       >
         <div className="flex flex-col gap-3 pl-2">
           <SmartLink
-            href="/formations/voiture"
+            href="/#formations"
             className="
               flex
               items-center
@@ -91,7 +91,7 @@ export default function MobileFormationMenu() {
           </SmartLink>
 
           <SmartLink
-            href="/formations/moto"
+            href="/#formations"
             className="
               flex
               items-center

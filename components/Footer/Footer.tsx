@@ -36,7 +36,7 @@ export default function Footer() {
           {/* Identité */}
 
           <div>
-            <a
+            <SmartLink
               href="/"
               className="group flex items-center gap-3 text-xl font-black text-white"
             >
@@ -48,7 +48,7 @@ export default function Footer() {
                 Auto
                 <span className="text-yellow-400">Drive</span>
               </span>
-            </a>
+            </SmartLink>
 
             <p className="mt-5 max-w-xs text-sm leading-7 text-blue-100">
               Apprenez à conduire sereinement avec une formation moderne et un
@@ -56,8 +56,8 @@ export default function Footer() {
             </p>
 
             <div className="mt-6 flex gap-3">
-              <a
-                href="#"
+              <SmartLink
+                href="https://www.instagram.com/"
                 className="
                     flex h-12 w-12 items-center justify-center rounded-2xl
                     border border-white/10
@@ -70,10 +70,10 @@ export default function Footer() {
                   "
               >
                 <FaInstagram size={20} />
-              </a>
+              </SmartLink>
 
-              <a
-                href="#"
+              <SmartLink
+                href="https://www.tiktok.com/"
                 className="
                     flex h-12 w-12 items-center justify-center rounded-2xl
                     border border-white/10
@@ -86,7 +86,7 @@ export default function Footer() {
                   "
               >
                 <FaTiktok size={20} />
-              </a>
+              </SmartLink>
             </div>
           </div>
 

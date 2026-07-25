@@ -26,7 +26,7 @@ export default function HeroContent() {
 
       <div className="mt-10 flex flex-col gap-4 sm:flex-row">
         <SmartLink
-          href="/contact"
+          href="/#contact"
           className="
             inline-flex
             items-center
