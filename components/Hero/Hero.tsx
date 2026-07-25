@@ -3,6 +3,8 @@ import BackgroundGrid from "../ui/BackgroundGrid";
 import HeroCard from "./HeroCard";
 import HeroContent from "./HeroContent";
 
+import FadeIn from "../animations/FadeIn";
+
 export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-[#F8FAFC]">
@@ -13,10 +15,14 @@ export default function Hero() {
       <BackgroundGrid />
 
       <div className="relative mx-auto grid max-w-7xl items-center gap-20 px-6 py-4 lg:grid-cols-2">
-        <HeroContent />
+        <FadeIn direction="left">
+          <HeroContent />
+        </FadeIn>
 
         <div className="relative">
-          <HeroCard />
+          <FadeIn direction="right" delay={0.2}>
+            <HeroCard />
+          </FadeIn>
         </div>
       </div>
 

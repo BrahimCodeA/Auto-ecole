@@ -1,8 +1,10 @@
 import React from "react";
 import { formations } from "./formations";
 import FormationCard from "./FormationCard";
+
 import BackgroundGlow from "../ui/BackgroundGlow";
 import BackgroundGrid from "../ui/BackgroundGrid";
+import Reveal from "../animations/Reveal";
 
 export default function Formations() {
   return (
@@ -16,46 +18,45 @@ export default function Formations() {
       <div className="relative mx-auto max-w-7xl">
         {/* Header */}
 
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="mt-6 text-4xl font-black text-blue-950 lg:text-5xl">
-            Choisissez le permis
-            <span className="text-yellow-400"> qui vous correspond</span>
-          </h2>
+        <Reveal>
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="mt-6 text-4xl font-black text-blue-950 lg:text-5xl">
+              Choisissez le permis
+              <span className="text-yellow-400"> qui vous correspond</span>
+            </h2>
 
-          <p className="mt-5 text-lg text-slate-600">
-            Des formations adaptées à votre rythme avec un accompagnement
-            jusqu'à la réussite.
-          </p>
-        </div>
+            <p className="mt-5 text-lg text-slate-600">
+              Des formations adaptées à votre rythme avec un accompagnement
+              jusqu'à la réussite.
+            </p>
+          </div>
+        </Reveal>
 
         {/* Cards */}
 
         <div
           className="
-          mt-16
-          flex
-          snap-x
-          snap-mandatory
-          gap-6
-          overflow-x-auto
-          pb-6
-          pt-4
-          lg:grid
-          lg:grid-cols-3
-          lg:overflow-visible
-        "
+            mt-16
+            flex
+            snap-x
+            snap-mandatory
+            gap-6
+            overflow-x-auto
+            pb-6
+            pt-4
+            lg:grid
+            lg:grid-cols-3
+            lg:overflow-visible
+          "
         >
-          {formations.map((formation) => (
-            <div
+          {formations.map((formation, index) => (
+            <Reveal
               key={formation.title}
-              className="
-                min-w-[90%]
-                snap-center
-                lg:min-w-0
-              "
+              delay={index * 0.15}
+              className="min-w-[90%] snap-center lg:min-w-0"
             >
               <FormationCard {...formation} />
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>

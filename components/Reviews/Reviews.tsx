@@ -1,10 +1,11 @@
 import React from "react";
+import { Star } from "lucide-react";
 
 import BackgroundGrid from "../ui/BackgroundGrid";
 import BackgroundGlow from "../ui/BackgroundGlow";
 import ReviewCard from "./ReviewCard";
 import { reviews } from "./reviews";
-import { Star } from "lucide-react";
+import Reveal from "../animations/Reveal";
 
 export default function Reviews() {
   return (
@@ -13,44 +14,55 @@ export default function Reviews() {
       <BackgroundGlow />
 
       <div className="relative mx-auto max-w-7xl">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="mt-6 text-4xl font-black text-blue-900 lg:text-5xl">
-            Ils ont obtenu leur
-            <span className="text-yellow-400"> permis</span>
-          </h2>
+        {/* Header */}
 
-          <p className="mt-5 text-lg text-slate-600">
-            Découvrez les retours de nos élèves qui nous ont fait confiance.
-          </p>
-        </div>
+        <Reveal>
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="mt-6 text-4xl font-black text-blue-900 lg:text-5xl">
+              Ils ont obtenu leur
+              <span className="text-yellow-400"> permis</span>
+            </h2>
 
-        <div className="mt-12 flex items-center justify-center gap-4">
-          <div className="text-5xl font-black text-blue-900">4.9</div>
-
-          <div>
-            <div className="flex gap-1">
-              {[...Array(5)].map((_, index) => (
-                <Star
-                  key={index}
-                  className="h-5 w-5 fill-yellow-400 text-yellow-400"
-                />
-              ))}
-            </div>
-
-            <p className="mt-1 text-sm text-slate-500">
-              Plus de 1200 élèves accompagnés
+            <p className="mt-5 text-lg text-slate-600">
+              Découvrez les retours de nos élèves qui nous ont fait confiance.
             </p>
           </div>
-        </div>
+        </Reveal>
+
+        {/* Note */}
+
+        <Reveal delay={0.15}>
+          <div className="mt-12 flex items-center justify-center gap-4">
+            <div className="text-5xl font-black text-blue-900">4.9</div>
+
+            <div>
+              <div className="flex gap-1">
+                {[...Array(5)].map((_, index) => (
+                  <Star
+                    key={index}
+                    className="h-5 w-5 fill-yellow-400 text-yellow-400"
+                  />
+                ))}
+              </div>
+
+              <p className="mt-1 text-sm text-slate-500">
+                Plus de 1200 élèves accompagnés
+              </p>
+            </div>
+          </div>
+        </Reveal>
+
+        {/* Cards */}
 
         <div className="mt-16 flex snap-x snap-mandatory gap-6 overflow-x-auto pb-6 lg:grid lg:grid-cols-3 lg:overflow-visible">
-          {reviews.map((review) => (
-            <div
+          {reviews.map((review, index) => (
+            <Reveal
               key={review.name}
+              delay={index * 0.15}
               className="min-w-[90%] snap-center lg:min-w-0"
             >
               <ReviewCard {...review} />
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>
