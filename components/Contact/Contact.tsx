@@ -4,6 +4,7 @@ import { contactInformations } from "./contactInforations";
 import BackgroundGrid from "../ui/BackgroundGrid";
 import ContactCard from "./ContactCard";
 import BackgroundGlow from "../ui/BackgroundGlow";
+import SmartLink from "../shared/SmartLink";
 
 export default function Contact() {
   return (
@@ -66,13 +67,13 @@ export default function Contact() {
               </p>
             </div>
 
-            <a
+            <SmartLink
               href="tel:0102030405"
               className="inline-flex items-center gap-2 rounded-2xl bg-yellow-400 px-7 py-4 font-bold text-blue-950 transition hover:-translate-y-1 hover:bg-yellow-300"
             >
               <PhoneCall size={18} />
               Appeler maintenant
-            </a>
+            </SmartLink>
           </div>
         </div>
       </div>
