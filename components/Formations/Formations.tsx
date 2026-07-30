@@ -1,6 +1,8 @@
 import React from "react";
+
 import { formations } from "./formations";
 import FormationCard from "./FormationCard";
+import MobileCarousel from "../ui/MobileCarousel";
 
 import BackgroundGlow from "../ui/BackgroundGlow";
 import BackgroundGrid from "../ui/BackgroundGrid";
@@ -36,32 +38,21 @@ export default function Formations() {
         </Reveal>
 
         {/* Cards */}
-
-        <div
-          className="
-            mt-16
-            flex
-            snap-x
-            snap-mandatory
-            gap-6
-            overflow-x-auto
-            pb-6
-            pt-4
-            lg:grid
-            lg:grid-cols-3
-            lg:overflow-visible
-          "
-        >
-          {formations.map((formation, index) => (
-            <Reveal
-              key={formation.title}
-              delay={index * 0.15}
-              className="min-w-[90%] snap-center lg:min-w-0"
-            >
-              <FormationCard {...formation} />
-            </Reveal>
-          ))}
+        <div className="mt-10 lg:mt-16">
+          <MobileCarousel className="lg:grid lg:grid-cols-3">
+            {formations.map((formation, index) => (
+              <Reveal
+                key={formation.title}
+                delay={index * 0.15}
+                className="min-w-[100%] h-full snap-center lg:min-w-0"
+              >
+                <FormationCard {...formation} />
+              </Reveal>
+            ))}
+          </MobileCarousel>
         </div>
+
+        <div className="pointer-events-none absolute right-0 top-0 h-full w-12 bg-gradient-to-l from-[#F8FAFC] to-transparent lg:hidden" />
       </div>
     </section>
   );

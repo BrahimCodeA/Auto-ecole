@@ -6,6 +6,7 @@ import BackgroundGlow from "../ui/BackgroundGlow";
 import ReviewCard from "./ReviewCard";
 import { reviews } from "./reviews";
 import Reveal from "../animations/Reveal";
+import MobileCarousel from "../ui/MobileCarousel";
 
 export default function Reviews() {
   return (
@@ -56,17 +57,18 @@ export default function Reviews() {
         </Reveal>
 
         {/* Cards */}
-
-        <div className="mt-16 flex snap-x snap-mandatory gap-6 overflow-x-auto pb-6 lg:grid lg:grid-cols-3 lg:overflow-visible">
-          {reviews.map((review, index) => (
-            <Reveal
-              key={review.name}
-              delay={index * 0.15}
-              className="min-w-[90%] snap-center lg:min-w-0"
-            >
-              <ReviewCard {...review} />
-            </Reveal>
-          ))}
+        <div className="mt-10 lg:mt-16">
+          <MobileCarousel className="lg:grid lg:grid-cols-3">
+            {reviews.map((review, index) => (
+              <Reveal
+                key={review.name}
+                delay={index * 0.15}
+                className="min-w-[100%] snap-center lg:min-w-0"
+              >
+                <ReviewCard {...review} />
+              </Reveal>
+            ))}
+          </MobileCarousel>
         </div>
       </div>
     </section>

@@ -17,7 +17,7 @@ export default function ReviewCard({
   icon: Icon,
 }: ReviewCardProps) {
   return (
-    <div className="group relative overflow-hidden rounded-[28px] border border-blue-100 bg-white p-7 shadow-lg transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+    <div className="group relative flex h-full flex-col overflow-hidden rounded-[28px] border border-blue-100 bg-white p-7 shadow-lg transition duration-300 hover:-translate-y-2 hover:shadow-xl">
       <BackgroundGrid />
 
       <Quote className="absolute right-6 top-6 h-16 w-16 text-blue-950/5" />
@@ -33,8 +33,8 @@ export default function ReviewCard({
 
       <p className="relative mt-6 leading-8 text-slate-600">"{comment}"</p>
 
-      <div className="relative mt-8 flex items-center gap-4">
-        <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-950 text-yellow-400">
+      <div className="relative mt-auto flex items-center gap-4 pt-8">
+        <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-blue-950 text-yellow-400">
           <Icon size={26} />
         </div>
 
