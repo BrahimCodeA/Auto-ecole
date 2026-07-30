@@ -22,7 +22,7 @@ export default function MobileMenu() {
 
         <SheetContent
           side="right"
-          className="pointer-events-auto  z-[9999] bg-white border-l border-slate-200 w-[320px] px-6 [&>button]:top-7 [&>button]:right-6"
+          className="bg-white border-l border-slate-200 w-[320px] px-6 [&>button]:top-7 [&>button]:right-6"
         >
           {/* HEADER MENU */}
           <div className="flex items-center gap-2 mt-6 mb-12">
