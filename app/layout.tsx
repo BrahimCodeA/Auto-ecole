@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Auto Ecole",
+  title: "AutoDrive",
   description: "Auto ecole des malins",
 };
 
